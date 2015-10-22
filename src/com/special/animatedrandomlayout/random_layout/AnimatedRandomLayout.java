@@ -1,4 +1,4 @@
-package com.special.simplecloudview.random_layout;
+package com.special.animatedrandomlayout.random_layout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import android.widget.FrameLayout;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
 import com.nineoldandroids.view.ViewPropertyAnimator;
-import com.special.simplecloudview.activity.LogUtil;
+import com.special.animatedrandomlayout.activity.LogUtil;
 
 /**
  * RandomLayout，其主要目的是为了按要求实现随机布局。
@@ -34,7 +34,7 @@ import com.special.simplecloudview.activity.LogUtil;
  *
  */
 @SuppressLint("HandlerLeak")
-public class CloudRandomLayout extends FrameLayout {
+public class AnimatedRandomLayout extends FrameLayout {
 	
 //参数声明/**************************************************************************************/
 	/** 用于生成随机偏移量的Random对象 */
@@ -94,15 +94,15 @@ public class CloudRandomLayout extends FrameLayout {
 
 	
 //构造方法/**************************************************************************************/
-	public CloudRandomLayout(Context context) {
+	public AnimatedRandomLayout(Context context) {
 		this(context, null);
 	}
 
-	public CloudRandomLayout(Context context, AttributeSet attrs) {
+	public AnimatedRandomLayout(Context context, AttributeSet attrs) {
 		this(context, attrs, -1);
 	}
 	
-	public CloudRandomLayout(Context context, AttributeSet attrs, int defStyle) {
+	public AnimatedRandomLayout(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		init();
 	}
@@ -311,6 +311,15 @@ public class CloudRandomLayout extends FrameLayout {
 		return false;
 	}
 	
+	/**
+	 * 使得自动生成子控件并填装步骤，在用户切出界面后，不再执行，避免占用CPU资源
+	 */
+	@Override
+	protected void onDetachedFromWindow() {
+		handler.removeCallbacksAndMessages(null);
+		super.onDetachedFromWindow();
+	}
+
 	
 //工具包方法/**************************************************************************************/
 	//设置初始属性=============================================================

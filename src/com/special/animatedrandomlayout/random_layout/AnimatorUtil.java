@@ -1,4 +1,4 @@
-package com.special.simplecloudview.random_layout;
+package com.special.animatedrandomlayout.random_layout;
 
 import android.view.View;
 

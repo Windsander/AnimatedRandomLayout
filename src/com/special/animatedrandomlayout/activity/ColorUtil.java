@@ -1,4 +1,4 @@
-package com.special.simplecloudview.activity;
+package com.special.animatedrandomlayout.activity;
 
 import java.util.Random;
 

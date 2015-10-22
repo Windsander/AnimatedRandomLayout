@@ -1,4 +1,4 @@
-package com.special.simplecloudview.activity;
+package com.special.animatedrandomlayout.activity;
 
 import android.content.Context;
 import android.widget.Toast;

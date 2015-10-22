@@ -12,6 +12,6 @@
         android:id="@+id/rl_cloud"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.special.simplecloudview.random_layout.CloudRandomLayout" />
+        class="com.special.animatedrandomlayout.random_layout.AnimatedRandomLayout" />
 
 </RelativeLayout>

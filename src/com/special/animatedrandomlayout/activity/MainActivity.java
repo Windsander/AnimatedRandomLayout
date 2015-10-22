@@ -1,4 +1,4 @@
-package com.special.simplecloudview.activity;
+package com.special.animatedrandomlayout.activity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,9 +12,9 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 
-import com.special.simplecloudview.R;
-import com.special.simplecloudview.random_layout.CloudRandomLayout;
-import com.special.simplecloudview.random_layout.CloudRandomLayout.OnCreateItemViewListener;
+import com.special.animatedrandomlayout.random_layout.AnimatedRandomLayout;
+import com.special.animatedrandomlayout.random_layout.AnimatedRandomLayout.OnCreateItemViewListener;
+import com.special.animatedrandomlayout.R;
 
 public class MainActivity extends Activity {
 
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
-		CloudRandomLayout cloudRandomLayout = (CloudRandomLayout) findViewById(R.id.rl_cloud);
+		AnimatedRandomLayout cloudRandomLayout = (AnimatedRandomLayout) findViewById(R.id.rl_cloud);
 		
 		
 		String[] str = {"1","2","3","4","5","6","7","8","9","10","a","b","c","d","e","f","g","h","i",
