@@ -1,6 +1,10 @@
 # AnimatedRandomLayout
-![pcl]
-本布局实现了在屏幕上随机生成可供操作的子控件控件，并完成向中心移动的随控件出现位置，动态设定的动画效果。
+
+      本布局实现了在屏幕上随机生成可供操作的子控件控件，并完成向中心移动的随控件出现位置，动态设定的动画效果。
+      
+#<h3>SimpleExample:
+<img src="http://i11.tietuku.com/96c85ac6edc5e00b.gif" align="center">
+      
 #<h3>可操控参数：
 
       随机生成的周期 setLooperDuration(int mLooperDuration)
